@@ -41,9 +41,11 @@ This project has backend and frontend folder.
 1. Clone our project with the command `git clone https://github.com/AciaKr/lumincoin-finance-spa.git`
 2. Go to the *backend folder* by executing `cd backend`
 3. Install all dependencies by running `npm i`
-4. Start running the build by executing `npm run start`\
-   The browser bar will display the localhost:3000 main page.
+4. Start running the build by executing `npm run start`
 5. Go to the *frontend folder* by executing `cd frontend`
 6. Install all dependencies by running `npm i`
-7. Start running the build by executing `npm run dev`\
-   The browser bar will display the localhost:3000 main page.
+7. Start running the build by executing `npm run build`
+8. Start running:
+   - the live-server by executing `npm run live-server`
+   - the http-server by executing `npm run http-server`
+   The browser bar will display the http://127.0.0.1:8080 login page.
