@@ -47,5 +47,5 @@ This project has backend and frontend folder.
 7. Start running the build by executing `npm run build`
 8. Start running:
    - the live-server by executing `npm run live-server`
-   - the http-server by executing `npm run http-server`
+   - the http-server by executing `npm run http-server`\
    The browser bar will display the http://127.0.0.1:8080 login page.
