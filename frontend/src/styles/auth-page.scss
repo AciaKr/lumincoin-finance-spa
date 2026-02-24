@@ -1,0 +1,76 @@
+@use 'constants';
+
+.auth-page {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: hidden;
+
+  &.login-page {
+    min-height: 435px;
+  }
+
+  &.signup-page {
+    min-height: 545px;
+  }
+
+  #content {
+    flex: 0;
+    align-items: center;
+  }
+
+  .auth-container {
+    width: 397px;
+  }
+
+  .link-after-button {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.input-container {
+
+  .input-item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &.input-remember-me {
+      font-size: 12px;
+      line-height: 23px;
+
+      .form-check-input {
+        width: 13px;
+        height: 13px;
+        margin-top: 0;
+        margin-right: 11px;
+        border-radius: 2px;
+      }
+    }
+
+    .input-group {
+      .input-group-text {
+        background-color: constants.$color-background-icon;
+        border: 1px solid constants.$color-outline;
+        & > * {
+          color: constants.$color-light-text;
+          width: 16px;
+        }
+      }
+
+      .form-control:not(.is-invalid) {
+        border: 1px solid constants.$color-outline;
+        border-radius: 4px;
+
+        &::placeholder {
+          font-size: 15px;
+          line-height: 24px;
+          color: constants.$color-light-text;
+        }
+      }
+    }
+  }
+}

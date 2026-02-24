@@ -1,0 +1,191 @@
+@use 'constants';
+
+.main {
+  padding: 100px 60px;
+  flex: 1;
+  margin-left: 218px;
+
+  .title-page {
+    margin-bottom: 40px;
+  }
+
+  .toolbar {
+    gap: 20px;
+    font-family: "Roboto Medium", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 40px 0;
+
+    .btn.toolbar-item {
+      width: 100px;
+      border: 1px solid constants.$color-light-text;
+      border-radius: 4px;
+
+      &.active,
+      &:hover {
+        border: 1px solid constants.$color-light-text;
+        color: constants.$color-background;
+        background-color: constants.$color-light-text;
+      }
+    }
+
+    .block-range {
+      gap: 20px;
+
+      .range {
+        .btn.range-item {
+          width: 63px;
+          color: constants.$color-light-text;
+          background-color: transparent;
+          border: transparent;
+          text-decoration: underline;
+          text-underline-offset: 2px;
+        }
+
+        .range-label {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
+  .charts {
+    padding-top: 100px;
+
+    .chart-item {
+      margin-bottom: 40px;
+    }
+
+    .chart-title {
+      margin-bottom: 20px;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 450px;
+      width: 450px;
+    }
+
+    .separator {
+      width: 1px;
+      height: 450px;
+      background-color: constants.$color-border;
+    }
+
+    @media screen and (max-width: 1250px) {
+      .separator {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 510px) {
+      .chart-container {
+        height: 300px;
+        width: 300px;
+      }
+    }
+  }
+
+  .card {
+    font-family: "Roboto Medium", sans-serif;
+    font-weight: 500;
+    height: 121px;
+
+    .card-title {
+      font-size: 28px;
+      line-height: 33px;
+      color: constants.$color-card-title;
+      margin-bottom: 10px;
+    }
+
+    .card-add {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: constants.$color-outline;
+      font-size: 28px;
+      line-height: 33px;
+      text-decoration: none;
+    }
+  }
+
+  .table {
+    font-size: 16px;
+    line-height: 23px;
+
+    tr {
+      border-top: 1px solid constants.$color-border;
+      border-bottom: 1px solid constants.$color-border;
+    }
+
+    thead {
+      .th-text {
+        font-family: "Roboto Bold", sans-serif;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 1.33333px;
+        color: constants.$color-brand;
+        padding: 16px;
+      }
+    }
+
+    tbody {
+      tr > * {
+        padding: 12px;
+      }
+
+      .item-tools {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        padding-right: 0;
+
+        & > a {
+          color: constants.$color-text;
+          transition: all .3s ease-in-out;
+
+          &:hover {
+            color: constants.$color-link;
+          }
+        }
+      }
+    }
+  }
+
+  .modal {
+    .modal-dialog {
+      width: 530px;
+      max-width: none;
+    }
+
+    .modal-content {
+      padding: 40px;
+    }
+
+    .modal-body {
+      font-family: "Roboto Medium", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      color: constants.$color-card-title;
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .main {
+    margin: 0;
+    padding: 100px 20px 40px 20px;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .main {
+    padding: 80px 10px 20px 10px;
+  }
+}

@@ -1,0 +1,230 @@
+@use 'constants';
+
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 218px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 40px 0;
+  border-right: 1px solid constants.$color-border;
+  z-index: 10;
+
+  .sidebar-burger {
+    display: none;
+
+    .icon-burger {
+      width: 16px;
+      height: 16px;
+      color: constants.$color-light-text;
+    }
+  }
+
+  .sidebar-logo {
+    padding: 0 50px 20px 50px;
+    border-bottom: 1px solid constants.$color-border;
+
+    img {
+      width: 98px;
+    }
+  }
+
+  .sidebar-nav {
+    margin: 60px 20px 80px;
+    flex: 1;
+
+    .nav-item {
+      background-color: transparent;
+
+      .nav-link {
+        padding: 12px 12px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        column-gap: 10px;
+        color: constants.$color-brand;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 5px;
+
+        &.active,
+        &.active:hover,
+        &.show {
+          background-color: constants.$color-link;
+          color: constants.$color-background;
+        }
+      }
+
+      &:hover {
+        .nav-link {
+          color: constants.$color-link;
+          background-color: transparent;
+
+          .nav-icon {
+            fill: constants.$color-link;
+          }
+
+          &.show {
+            background-color: constants.$color-link;
+            color: constants.$color-background;
+          }
+        }
+      }
+
+      .dropdown {
+
+        .btn-dropdown.show {
+          border-radius: 5px 5px 0 0;
+
+          .dropdown-arrow {
+            transform: rotate(90deg);
+          }
+        }
+
+        .dropdown-menu.show {
+          width: 100%;
+          transform: translate3d(0px, 40px, 0px) !important;
+          border-radius: 0 0 5px 5px;
+          border-color: constants.$color-link;
+          padding: 0;
+
+          .dropdown-item {
+            border-radius: 0;
+          }
+
+          .dropdown-item:hover,
+          .dropdown-item.active,
+          .dropdown-item.active:hover {
+            background-color: constants.$color-link;
+            color: constants.$color-background;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar-balance {
+    font-family: "Roboto Medium", sans-serif;
+    font-weight: 600;
+    color: constants.$color-brand;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+
+    .balance-value {
+      color: constants.$color-link;
+    }
+
+    .balance-icon {
+      display: none;
+    }
+  }
+
+  .sidebar-user {
+    padding: 20px 20px 0 20px;
+    border-top: 1px solid constants.$color-border;
+    display: flex;
+    align-items: center;
+    line-height: 24px;
+    color: #052C65;
+    cursor: pointer;
+
+    .icon-wrapper {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: constants.$color-border;
+      color: constants.$color-light-text;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+
+      .user-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .user-name {
+      max-width: 125px;
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    height: 60px;
+    background-color: constants.$color-background;
+    width: 100%;
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid constants.$color-border;
+
+    .sidebar-nav {
+      display: none;
+    }
+
+    .sidebar-burger {
+      display: flex;
+      order: 0;
+      & > * {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .sidebar-logo {
+      padding: 0;
+      border: none;
+      order: 1;
+    }
+
+    .sidebar-info {
+      order: 2;
+      display: flex;
+      align-items: center;
+    }
+
+    .sidebar-balance {
+      align-self: center;
+
+      .balance-title {
+        display: none;
+      }
+
+      .balance-icon {
+        display: inline;
+      }
+    }
+
+    .sidebar-user {
+      padding: 0;
+      border: none;
+
+      .icon-wrapper {
+        margin: 0;
+      }
+
+      .user-name {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .sidebar {
+    gap: 20px;
+    padding: 10px;
+
+    .sidebar-balance {
+      padding: 10px;
+    }
+  }
+}

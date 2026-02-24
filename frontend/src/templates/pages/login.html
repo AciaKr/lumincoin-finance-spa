@@ -1,0 +1,51 @@
+<div class="auth-container d-flex flex-column align-items-center">
+    <div class="logo p-3 mb-5">
+        <img src="/asset/images/logo.png" alt="Lumincoin Finance"/>
+    </div>
+    <h1 class="title m-0">Вход</h1>
+    <div id="common-error" class="invalid-feedback text-center mt-3">Неправильный email или пароль</div>
+    <form class="d-flex flex-column align-items-center w-100">
+        <div class="input-container w-100 py-3 my-1">
+            <div class="input-item">
+                <label class="visually-hidden" for="email">Электронная почта</label>
+                <div class="input-group">
+                    <div class="input-group-text"><i class="far fa-envelope-open"></i></div>
+                    <input type="email" class="form-control" id="email" placeholder="Электронная почта" required>
+                    <span id="email-error" class="invalid-feedback">Введите корректный E-mail</span>
+                </div>
+
+            </div>
+            <div class="input-item">
+                <label class="visually-hidden" for="password">Пароль</label>
+                <div class="input-group">
+                    <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                    <input type="password" class="form-control" id="password" placeholder="Пароль" required>
+                    <span id="password-error" class="invalid-feedback">Заполните пароль</span>
+                </div>
+            </div>
+            <div class="input-item input-remember-me">
+                <div class="d-flex align-items-center gap-2">
+                    <input type="checkbox" id="remember-me" class="form-check-input">
+                    <label for="remember-me">
+                        Запомнить меня
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-button w-100">
+            <button type="button" class="btn btn-primary w-100" id="process-button">Войти</button>
+        </div>
+    </form>
+
+    <div class="link-after-button w-100">
+        <p>Ещё нет аккаунта?
+            <a href="/signup" class="link-underline-primary">
+                Пройдите регистрацию
+            </a>
+        </p>
+    </div>
+</div>
+
+
+

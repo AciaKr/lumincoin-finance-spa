@@ -1,0 +1,64 @@
+<h1 class="title title-page">Доходы и расходы</h1>
+<div class="d-flex gap-2">
+    <a href="/operations/create?type=income" class="btn btn-success">Создать доход</a>
+    <a href="/operations/create?type=expense" class="btn btn-danger">Создать расход</a>
+</div>
+<div class="toolbar d-flex align-items-center flex-wrap" id="toolbar-period">
+    <input type="radio" class="btn-check" name="period" value="today" id="today" autocomplete="off" checked>
+    <label class="btn btn-outline-secondary toolbar-item" for="today">Сегодня</label>
+
+    <input type="radio" class="btn-check" name="period" value="week" id="week" autocomplete="off">
+    <label class="btn btn-outline-secondary toolbar-item" for="week">Неделя</label>
+
+    <input type="radio" class="btn-check" name="period" value="month" id="month" autocomplete="off">
+    <label class="btn btn-outline-secondary toolbar-item" for="month">Месяц</label>
+
+    <input type="radio" class="btn-check" name="period" value="year" id="year" autocomplete="off">
+    <label class="btn btn-outline-secondary toolbar-item" for="year">Год</label>
+
+    <input type="radio" class="btn-check" name="period" value="all" id="all" autocomplete="off">
+    <label class="btn btn-outline-secondary toolbar-item" for="all">Все</label>
+
+    <div class="block-range d-flex align-items-center">
+        <input type="radio" class="btn-check" name="period" value="interval" id="interval" autocomplete="off">
+        <label class="btn btn-outline-secondary toolbar-item" for="interval">Интервал</label>
+
+        <div class="range d-flex align-items-center" id="range-date">
+            <label class="range-label" for="range-with">с</label>
+            <input type="text" class="btn range-item me-3" id="range-with" placeholder="Дата">
+
+            <label class="range-label" for="range-by">по</label>
+            <input type="text" class="btn range-item me-3" id="range-by" placeholder="Дата">
+        </div>
+
+    </div>
+</div>
+<table class="table table-responsive table-borderless text-center">
+    <thead>
+    <tr>
+        <th scope="col" class="th-text">№ операции</th>
+        <th scope="col" class="th-text">Тип</th>
+        <th scope="col" class="th-text">Категория</th>
+        <th scope="col" class="th-text">Сумма</th>
+        <th scope="col" class="th-text">Дата</th>
+        <th scope="col" class="th-text">Комментарий</th>
+        <th scope="col" class="th-text"></th>
+    </tr>
+    </thead>
+    <tbody id="records"></tbody>
+</table>
+
+
+<div class="modal" tabindex="-1" id="modalDelete">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <p id="modalText"></p>
+            </div>
+            <div class="modal-footer border-0 p-0 justify-content-center gap-2">
+                <a href="javascript:void(0)" class="btn btn-success m-0" id="modalDeleteButton" data-bs-dismiss="modal">Да, удалить</a>
+                <a href="javascript:void(0)" class="btn btn-danger m-0" data-bs-dismiss="modal">Не удалять</a>
+            </div>
+        </div>
+    </div>
+</div>

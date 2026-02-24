@@ -1,0 +1,38 @@
+<h1 class="title title-page" id="title-page">Создание дохода/расхода</h1>
+<form class="form">
+    <div class="mb-2">
+        <label for="typeSelect" class="form-label d-none">Тип</label>
+        <select name="type" class="form-select" id="typeSelect" required>
+            <optgroup label="Тип">
+                <option value="income">Доход</option>
+                <option value="expense">Расход</option>
+            </optgroup>
+        </select>
+        <div id="typeSelect-error" class="invalid-feedback mb-3">Выберите тип операции</div>
+    </div>
+    <div class="mb-2">
+        <label for="categorySelect" class="form-label d-none">Категория дохода/расхода</label>
+        <select name="category" class="form-select" id="categorySelect" required></select>
+        <div id="categorySelect-error" class="invalid-feedback mb-3">Выберите категорию операции</div>
+    </div>
+    <div class="mb-2">
+        <label for="costItemInput" class="form-label d-none">Сумма дохода/расхода в $</label>
+        <input type="number" class="form-control" id="costItemInput" placeholder="Сумма в $...">
+        <div id="costItemInput-error" class="invalid-feedback mb-3">Укажите сумму операции в $</div>
+    </div>
+    <div class="mb-2">
+        <label for="dateItemInput" class="form-label d-none">Дата дохода/расхода</label>
+        <input type="date" class="form-control" id="dateItemInput" placeholder="Дата...">
+        <div id="dateItemInput-error" class="invalid-feedback mb-3">Укажите дату операции</div>
+    </div>
+    <div class="mb-3">
+        <label for="commentItemInput" class="form-label d-none">Комментарий</label>
+        <textarea type="text" class="form-control" rows="1" id="commentItemInput" placeholder="Комментарий..."></textarea>
+        <div id="commentItemInput-error" class="invalid-feedback mb-3">Укажите необходимый комментарий</div>
+    </div>
+    <div class="mt-1 d-flex gap-2">
+        <button type="button" class="btn btn-success" id="buttonCreate">Создать</button>
+        <button type="button" class="btn btn-danger" id="buttonCanceled">Отмена</button>
+    </div>
+</form>
+

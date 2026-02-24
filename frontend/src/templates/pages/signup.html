@@ -1,0 +1,68 @@
+<div class="auth-container d-flex flex-column align-items-center">
+    <div class="logo p-3 mb-5">
+        <img src="/asset/images/logo.png" alt="Lumincoin Finance"/>
+    </div>
+    <h1 class="title m-0">Создайте аккаунт</h1>
+    <div id="common-error" class="invalid-feedback text-center mt-3">
+        Не удалось зарегистрировать пользователя. Обратитесь в поддержку
+    </div>
+    <form class="d-flex flex-column align-items-center w-100">
+        <div class="input-container w-100 py-3 my-1">
+            <div class="input-item">
+                <label class="visually-hidden" for="name">Имя</label>
+                <div class="input-group">
+                    <div class="input-group-text"><i class="far fa-user"></i></div>
+                    <input type="text" class="form-control" id="name" placeholder="Имя" required>
+                    <span id="name-error" class="invalid-feedback">Заполните корректно поле "Имя"</span>
+                </div>
+            </div>
+            <div class="input-item">
+                <label class="visually-hidden" for="last-name">Фамилия</label>
+                <div class="input-group">
+                    <div class="input-group-text"><i class="far fa-user"></i></div>
+                    <input type="text" class="form-control" id="last-name" placeholder="Фамилия" required>
+                    <span id="last-name-error" class="invalid-feedback">Заполните корректно поле "Фамилия"</span>
+                </div>
+            </div>
+            <div class="input-item">
+                <label class="visually-hidden" for="email">Электронная почта</label>
+                <div class="input-group">
+                    <div class="input-group-text"><i class="far fa-envelope-open"></i></div>
+                    <input type="email" class="form-control" id="email" placeholder="Электронная почта" required>
+                    <span id="email-error" class="invalid-feedback">Введите корректный E-mail</span>
+                </div>
+            </div>
+            <div class="input-item">
+                <label class="visually-hidden" for="password">Пароль</label>
+                <div class="input-group">
+                    <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                    <input type="password" class="form-control" id="password" placeholder="Пароль" required>
+                    <span id="password-error" class="invalid-feedback">Заполните пароль <br> (>= 8 символов, мин. 1 заглавная буква и 1 цифра)</span>
+                </div>
+            </div>
+            <div class="input-item">
+                <label class="visually-hidden" for="confirm-password">Подтверждение пароля</label>
+                <div class="input-group">
+                    <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                    <input type="password" class="form-control" id="confirm-password" placeholder="Подтверждение пароля" required>
+                    <span id="confirm-password-error" class="invalid-feedback">Пароль и подтверждение пароля должно совпадать</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-button w-100">
+            <button type="button" class="btn btn-primary w-100" id="process-button">Войти</button>
+        </div>
+    </form>
+
+    <div class="link-after-button w-100">
+        <p class="text-center">Уже есть аккаунт?
+            <a href="/login" class="link-underline-primary">
+                Войдите в систему
+            </a>
+        </p>
+    </div>
+</div>
+
+
+

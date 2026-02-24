@@ -1,0 +1,74 @@
+<aside id="sidebar" class="sidebar">
+    <button class="sidebar-burger navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <a href="javascript:void(0)" id="burger-link"><i class="icon-burger fas fa-bars" id="icon-burger"></i></a>
+    </button>
+    <div class="sidebar-logo">
+        <a href="/"><img src="/asset/images/logo.png" alt="Lumincoin Finance"/></a>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="offcanvasBody">
+        </div>
+    </div>
+    <ul class="nav nav-pills flex-column sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a href="/" class="nav-link" aria-current="page">
+                <i class="nav-icon fas fa-house-chimney"></i>Главная
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/operations" class="nav-link">
+                <i class="nav-icon far fa-money-bill-1"></i>Доходы & Расходы
+            </a>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown">
+                <button class="btn btn-primary btn-dropdown nav-link justify-content-between" type="button"
+                        id="dropdownMenuButton" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+                    Категории<i class="fas fa-chevron-right dropdown-arrow"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenu">
+                    <li><a class="dropdown-item nav-link" href="/income">Доходы</a></li>
+                    <li><a class="dropdown-item nav-link" href="/expense">Расходы</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <div class="sidebar-info">
+        <div class="sidebar-balance">
+            <i class="fas fa-coins balance-icon"></i>
+            <span class="balance-title">Баланс:</span>
+            <span class="balance-value" id="balance"></span>
+        </div>
+        <div class="sidebar-user dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="icon-wrapper"><i class="user-icon far fa-user"></i></div>
+            <span class="user-name" id="user-name"></span>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/logout">Выйти</a></li>
+            </ul>
+
+        </div>
+    </div>
+</aside>
+
+<main class="main" id="main">
+
+</main>
+
+<div class="modal" tabindex="-1" id="modalBurgerMenu">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <p>Вы действительно хотите удалить категорию? Связанные доходы останутся без категории.</p>
+            </div>
+            <div class="modal-footer border-0 p-0 justify-content-center gap-2">
+                <button type="button" class="btn btn-success m-0" id="categoryDelete">Да, удалить</button>
+                <button type="button" class="btn btn-danger m-0" data-bs-dismiss="modal">Не удалять</button>
+            </div>
+        </div>
+    </div>
+</div>

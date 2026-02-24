@@ -1,0 +1,1 @@
+{"version":3,"file":"logout.d.ts","sourceRoot":"","sources":["logout.ts"],"names":[],"mappings":"AAEA,OAAO,EAAC,gBAAgB,EAAC,MAAM,wBAAwB,CAAC;AAExD,qBAAa,MAAM;IACf,OAAO,CAAC,QAAQ,CAAC,YAAY,CAAmB;gBAEpC,YAAY,EAAE,gBAAgB;YAW5B,MAAM;CAIvB"}

@@ -1,0 +1,60 @@
+@use 'constants';
+@use 'auth-page';
+@use 'sidebar';
+@use 'main';
+
+body {
+  font-family: "Roboto Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: constants.$color-text;
+  display: flex;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: "Roboto Medium", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 47px;
+  color: constants.$color-brand;
+}
+
+#content {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  min-width: 320px;
+  flex: 1;
+}
+
+.form {
+  max-width: 397px;
+  &::placeholder {
+    font-size: 15px;
+    line-height: 24px;
+    color: constants.$color-light-text;
+  }
+}
+
+.btn {
+  font-family: "Roboto Medium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 5px;
+  padding: 10px 16px;
+}
+
+
+@media screen and (max-width: 425px) {
+  .title {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
